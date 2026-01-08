@@ -7,7 +7,7 @@
 
 ## References and Resources
 
-N/A
+`https://ualberta-cmput301.github.io/labs/lab1.html`
 
 ## Verbal Collaboration
 
