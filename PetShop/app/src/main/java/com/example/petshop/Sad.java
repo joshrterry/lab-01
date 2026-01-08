@@ -1,4 +1,4 @@
-package com.example.petshop.moods;
+package com.example.petshop;
 
 import java.util.Date;
 

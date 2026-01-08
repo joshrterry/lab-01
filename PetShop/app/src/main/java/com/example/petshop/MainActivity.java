@@ -1,6 +1,7 @@
 package com.example.petshop;
 
 import android.os.Bundle;
+import android.util.Log;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,12 +9,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.example.petshop.pets.Cat;
-import com.example.petshop.pets.Dog;
-import com.example.petshop.pets.Pet;
-import com.example.petshop.pets.Scorpion;
-
 import java.util.ArrayList;
+import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
+        // CODE FROM LAB TUTORIAL -----------------------------------
         Cat cat = new Cat("Lucy");
         Dog dog = new Dog("Snoopy");
         Scorpion scorpion = new Scorpion("Scorponok");
@@ -40,7 +38,20 @@ public class MainActivity extends AppCompatActivity {
         ArrayList<Pettable> pettablePets = new ArrayList<Pettable>();
         pettablePets.add(cat);
         pettablePets.add(dog);
-//        pettablePets.add(scorpion); // This should produce an error
+        // pettablePets.add(scorpion); // This should produce an error
+
+        // PARTICIPATION COMPONENT ----------------------------------
+        Happy happy = new Happy(new Date());
+        Sad sad = new Sad(new Date());
+
+        ArrayList<Mood> moodList = new ArrayList<>();
+        moodList.add(happy);
+        moodList.add(sad);
+
+        for (Mood mood: moodList) {
+            Log.d("USER_DEBUG", String.valueOf(mood)); // verify moodList: should contain Happy and Sad objects
+        }
+        Log.d("USER_DEBUG", String.valueOf(sad.getMoodDate())); // verify correctness of getter: should return current date
 
     }
 }

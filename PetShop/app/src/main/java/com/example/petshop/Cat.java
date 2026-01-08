@@ -1,6 +1,4 @@
-package com.example.petshop.pets;
-
-import com.example.petshop.Pettable;
+package com.example.petshop;
 
 import java.util.Date;
 

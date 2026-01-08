@@ -1,4 +1,4 @@
-package com.example.petshop.pets;
+package com.example.petshop;
 
 import java.util.Date;
 
